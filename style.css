@@ -15,7 +15,7 @@ body{
 
 .main{
     background-color: #ffcfd2;
-    height: 75vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,16 +34,105 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 25em;
-    height: 26em;
+    flex-direction: column;
+}
+.square {
+    height: 120px;
+    width: 120px;
+    border: 1px gray solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.board{
-    background-color: white;
-    width: 7em;
-    height: 8em;
-    border-style: solid;
-    margin-left: 0.2em;
+#s0, #s1, #s2 {
+    border-top: 0;
+}
+#s0, #s3, #s6 {
+    border-left: 0;
+}
+#s6, #s7, #s8 {
+    border-bottom: 0;
+}
+#s2, #s5, #s8 {
+    border-right: 0;
+}
+.row {
+    display: flex;
+}
+.reset {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    justify-content: center;
+    background-color: #ffcfd2;
+    height: 10vh;
+}
 
+.button {
+    display: flex;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    justify-content: center;
+}
+#reset {
+    transition: transform 100ms ease-in;
+}
+#reset:hover {
+    transform: scale(1.1) rotate(180deg);
+}
+#reset:active {
+    transform: scale(0.9) rotate(360deg);
+}
+.xWon, .oWon, .tie {
+    padding: 40px;
+    border-radius: 24px;
+    background-color: #f5e6ce;
+    box-shadow: 0px 0px 32px 6px rgba(255,250,239,1);
+    -webkit-box-shadow: 0px 0px 32px 6px rgba(255,250,239,1);
+    -moz-box-shadow: 0px 0px 32px 6px rgba(255,250,239,1);
+    position:fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, 0%);
+    width: 210px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+.xWon {
+    display: flex;
+    gap: 20px;
+    color: #127475;
+    display: none;
+    border: #0E9594 1px solid;
+}
+.oWon {
+    display: flex;
+    gap: 20px;
+    color: #772b21;
+    display: none;
+    border: #F2542D 1px solid;
+}
+.tie {
+    display: none;
+    gap: 20px;
+    color:gray;
 
+    border: gray 1px solid;
+}
+
+.winner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 42px;
+}
+.winner img {
+    height: 40px;
+    width: 40px;
 }

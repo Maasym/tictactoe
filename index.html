@@ -12,34 +12,33 @@
     </div>
 
     <div class="main">
-        <div class="gameboard">
-            <div class="board">
-
+        <div class="gameboard" id="gameboard">
+            <div class="row">
+                <div class="square" id="s0" data-cell=0></div>
+                <div class="square" id="s1" data-cell=1></div>
+                <div class="square" id="s2" data-cell=2></div>
             </div>
-            <div class="board">
-
+            <div class="row">
+                <div class="square" id="s3" data-cell=3></div>
+                <div class="square" id="s4" data-cell=4></div>
+                <div class="square" id="s5" data-cell=5></div>
             </div>
-            <div class="board">
-
+            <div class="row">
+                <div class="square" id="s6" data-cell=6></div>
+                <div class="square" id="s7" data-cell=7></div>
+                <div class="square" id="s8" data-cell=8></div>
             </div>
-            <div class="board">
+        </div>
+    </div>
 
-            </div>
-            <div class="board">
-
-            </div>
-            <div class="board">
-
-            </div>
-            <div class="board">
-
-            </div>
-            <div class="board">
-
-            </div>
-            <div class="board">
-
-            </div>
+    <div class="bottom">
+        <div class="winner">
+            <div class="xWon" id="xWon"><img src="./svg/x.svg"><div>Won!</div></div>
+            <div class="oWon" id="oWon"><img src="./svg/o.svg"><div>Won!</div></div>
+            <div class="tie" id="tie"><div>Tie</div></div>
+        </div>
+        <div class="reset">
+            <div class='button'><img id="reset" src="./svg/refresh.svg" onClick="window.location.reload(false)"></div>
         </div>
     </div>
 
